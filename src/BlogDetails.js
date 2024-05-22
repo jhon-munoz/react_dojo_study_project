@@ -2,8 +2,12 @@ import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import useFetch from "./useFetch";
 
 const BlogDetails = () => {
-    const {id} = useParams() // Get parameter from path
-    const {data: blog, error, isPending} = useFetch("http://localhost:8000/blogs/" +id)
+    const { id } = useParams(); // Get parameter from path
+    const {
+        data: blog,
+        error,
+        isPending,
+    } = useFetch("http://localhost:8000/blogs/" + id);
 
     return (
         <div className="blog-details">
@@ -18,6 +22,6 @@ const BlogDetails = () => {
             )}
         </div>
     );
-}
+};
 
 export default BlogDetails;
